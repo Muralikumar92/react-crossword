@@ -1,0 +1,81 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+.board {
+  /* position: sticky;
+  top: 0;
+  background: white; */
+}
+
+.tile {
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 2px;
+  margin-left: 2px;
+  position: relative;
+  color: grey;
+}
+
+.tileInput {
+  width: 40px;
+  height: 40px;
+  border: none;
+  text-align: center;
+  font-weight: 700;
+  caret-color: transparent; /* hiding blinking cursor; */
+}
+
+.tile[present='false'] {
+  outline: 2px solid grey;
+  background-color: darkgrey;
+}
+
+.tile[present='true'] {
+  outline: 2px solid gray;
+}
+
+.tileInput[highlight='true'] {
+  background-color: #85c0f9;
+}
+
+.tileInput[focus='true'] {
+  background-color: #46a1fa;
+}
+
+.tileInput[incorrectindex='true'] {
+  background-color: #f74049;
+}
+
+.tileInput[incorrectindex='false'] {
+  background-color: #32d102;
+}
+
+.tile[focus='true'] {
+  background-color: #46a1fa;
+  outline-color: #46a1fa;
+  transform: scale(1.005);
+  z-index: 2;
+}
+
+.tile[incorrectindex='true'] {
+  /* outline-color: red; */
+  z-index: 1;
+  color: black;
+}
+
+.row {
+  display: flex;
+}
+
+.clueIndex {
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  font-size: 14px;
+  color: inherit;
+}
